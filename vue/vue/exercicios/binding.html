@@ -7,9 +7,20 @@
     <script src="/js/vue.min.js"></script>
 </head>
 <body class="exercicio">
-
+<div id="app">
+ <p><a :href="url">aula</a></p>
+ <p><input type="text" v-model="nome" >
+    <span >{{nome}}</span>
+</p>
+</div>
     <script>
-        // ...
+    new Vue({
+            el: '#app',
+            data: {
+                nome: 'Aprendendo VueJS',
+                url: 'http://www.google.com'
+            }
+        })
     </script>
 </body>
 </html>
